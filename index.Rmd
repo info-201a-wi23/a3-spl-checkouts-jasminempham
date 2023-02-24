@@ -5,82 +5,53 @@ output: html_document
 
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+I choose to analyze the checkouts for the different material types. As technology is becoming more accessible I wanted to view the physical versus digital data. Specifically the Audio books, Ebooks and Books as those are the most common types of checkouts. After anaylzing I wanted to figure out if the number of the digital and physical checkouts changed as time went on. As I predicted that in 2017 when the data set started, the physical books would be higher. However as we go to the more recent years, it would decrease and the digital checkouts would increase instead.
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-These will likely be calculated using your DPLYR skills, answering questions such as:
-
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
-
-Feel free to calculate and report values that you find relevant.
+For the data findings, I found the total number of audio book, ebook, and book checkouts from 2017 to 2022. The total for audio book was 3,728,672. The total for ebook was 5,053,218. The total for the books was 6,397,967. Based of this we are able to see that books were the most checked out Material Type with nearly 1.4 million higher than Ebook and nearly 1.7 million more than the audio books. I would like to see to data as more time goes on as it digital copies are becoming of the "norm". I also looked at the year and month that the most checkouts occured. In 2020, the library had the most checkouts. I could've predicted this as this was when COVID begun and people had to be quarantined with nothing to do. The most checkouts that occured in a month was June. I would have predicted September as that is when school begins however, June makes sense as well as many students have more freetime once summmer begins.
 
 ### The Dataset
 
 - Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+The data was published
 
+- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+The parameters of this data has usage class (physical or digital), checkout type, materital type, checkout year, checkout month, checkouts, title ISBN, creator, subjects, publishers and publication year.
+
+- How was the data collected or generated?  
+According to the Seattle Public Library website, they collect the data from people who checkout at their libraries.
+
+- Why was the data collected?  
+The data was collected to ensure that the library is continuing to stay up to date with the needs of the community. 
+
+- What, if any, ethical questions do you need to consider when working with this data? 
+A ethical concern is regarding the privacy of the people checking out the books, and if they are aware that their checkout data is being collected. 
+
+- What are possible limitations or problems with this data?   (at least 200 words
+
+Possible limitations with this data are that the type of materials available at a given time. The digital copies of items were likely to be less than the number of physical copies, especially before 2020, when many things had to go digital in order to be shared. It would be interesting to see the percentage of physical or digital items that are available to check out as each year passes. The availability would greatly affect the number of checkouts, as there is limited selection. Another area for improvement of this data set is that it only looks at data from the Seattle Public Library, and it would not be able to represent the population fully. The data would allow be able to represent the Seattle area. While it is a larger city/area it still only represents a small portion of the US population. It would be interesting to see how the checkout data changes based on the geographic area of the data. Another limitation is that the titles for the books sometimes include authors illustrators, etc. When filtering out the titles of books it would be difficult to find everything under one title as there may be a small variation in each causing it to filter incorrectly. The titles of the books should just be the title, the illustrator and author should be included in a seperate column. 
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
-```
+``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1.R")}
+chart1
+``````
+I made this graph because I wanted to the relationship between the physical and digital checkouts and how the amounts would have changed as time went on. There was a large dip in 2020 for physical checkouts, I am predicting due to the pandemic. There was a steady increase on digital downloads from 2017 to 2020. After 2020 it was pretty steady up until 2022. For the physical checkouts after 2020 it was not really picked up since the highest number of checkouts being in 2017. Physical was higher than digital up until mid 2019 where digital had surpassed and has not went below since. 
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
+``````{r, echo = FALSE, code = readLines("chart2.R")}
+chart2
+``````
+I made this graph to show the relationship between the different Material Types and how as time progressed it affected how many checkouts they had. Books were much higher in 2017 and like the digital/physical graph it dipped in 2020 due to the pandemic. After March 2020 most people were quarantined and unable to go to the library to checkout books like they were able to do previously. For audio books they have had a steady increase since 2017 with no major spikes. For Ebooks the treadline is higher than the audiobook however, the pattern is pretty similar. 
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
+``````{r, echo = FALSE, warning = FALSE, code = readLines("chart3.R")}
+chart3
+``````
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
-
-
+I made this graph to visually show the amount of checkouts for the most popular types of materials. While the other graphs show that books had decreased since 2020 it is still clear that the books still were the most checked out item for the years spanning from 2017-2022. As more time progresses and more data is avaliable it would intersting to see if Ebook would surpass the books. 
