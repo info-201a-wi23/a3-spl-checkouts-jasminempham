@@ -26,6 +26,12 @@ According to the Seattle Public Library website, they collect the data from peop
 - Why was the data collected?  
 The data was collected to ensure that the library is continuing to stay up to date with the needs of the community. 
 
+-How many observations (rows) are in your data?
+There are 816354 rows in this dataset. 
+
+-How many features (columns) are in the data?
+There are 12 columns in this dataset.
+
 - What, if any, ethical questions do you need to consider when working with this data? 
 A ethical concern is regarding the privacy of the people checking out the books, and if they are aware that their checkout data is being collected. 
 
