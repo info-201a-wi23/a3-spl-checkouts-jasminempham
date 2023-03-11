@@ -3,7 +3,7 @@ library(ggplot2)
 library(dplyr)
 library(scales)
 
-dataset<- read.csv("/Users/jasminetran/Desktop/2017-2023-10-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
+dataset<- read.csv("2017-2023-10-Checkouts-SPL-Data.csv", stringsAsFactors = FALSE)
 
 
 totalmaterialtype <- dataset  %>%  
@@ -12,7 +12,7 @@ totalmaterialtype <- dataset  %>%
   summarize(checkouttotal= sum(Checkouts))
 
 
-chart3<- ggplot(data = totalmaterialtype) +
+ggplot(data = totalmaterialtype) +
  geom_col(aes(x = MaterialType, y = checkouttotal, fill = MaterialType)) +
   labs(x= "Type of Material", y = "Checkout Total", title = "Total Checkouts for Each Type", fill = "Type of Material")
  
